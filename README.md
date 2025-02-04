@@ -25,8 +25,11 @@ Los verbos (o métodos) HTTP son acciones definidas por el mismo protocolo que i
 - **PATCH**: Se utiliza para *actualizar parcialmente* un recurso.
 - **DELETE**: Se utiliza para *eliminar* un recurso.  
 Además de los mecionados, existen otros métodos tales como, HEAD, OPTIONS, CONNECT y TRACE. De hecho, también se está trabajando en crear un nuevo método llamado QUERY para solventar ciertas falencias de los métodos GET y POST. Dejo un [artículo](https://newsmarketech.com/tecnologia/nuevo-metodo-http-query-una-alternativa-a-get-y-post/) al respecto
-### 3. ¿Qué es un request y un response en una comunicación HTTP? ¿Qué son los headers? 
+### 3. ¿Qué es un request y un response en una comunicación HTTP? ¿Qué son los headers?
+En una comunicación mediante el protocolo HTTP, un request es un mensaje (petición) que el cliente le envía al servidor usando uno de los verbos que mencioné anteriormente. Mientras que un response es todo lo contrario, es la respuesta que devuelve el servidor HTTP hacia el cliente luego de procesar la solicitud.  
+En ambos se utilizan los llamados *"headers"*, los cuales consisten en una serie de **metadatos** en forma de `clave: valor` que sirven para indicar aspectos técnicos de la comunicación. 
 ### 4. ¿Qué es un queryString? (En el contexto de una url)
+El queryString es una parte de la URL en la cual se envían datos adicionales al servidor para generar un comportamiento definido (filtrar, ordenar, etc.). El inicio del queryString está definido por un "?", cada parámetro se depara con un "&", y los parámetros se envían en formato de `clave=valor`. El mismo se utiliza en las peticiones que utilizan el método **GET**. Un ejemplo de queryString es: `https://tienda.com/productos?price_max=20000&color=red&order_by=price&direction=asc`. En el mismo se puede ver cómo solicitamos productos con precio máximo de 20000, de color rojo y además indicamos que los resultados se muestren ordenados por precio ascendentemente.
 ### 5. ¿Qué es el responseCode? ¿Qué significado tiene los posibles valores devueltos?
 ### 6. ¿Cómo se envía la data en un Get y cómo en un POST? 
 ### 7. ¿Qué verbo http utiliza el navegador cuando accedemos a una página?
